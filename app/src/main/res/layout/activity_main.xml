@@ -58,25 +58,9 @@
         android:layout_marginTop="16dp"
         android:text="Update"/>
 
-    <LinearLayout
+    <Spinner
+        android:id="@+id/itemsSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:weightSum="1">
-
-        <EditText
-            android:id="@+id/eSearch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.6"
-            android:hint="January"/>
-
-        <Button
-            android:id="@+id/bSearch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.4"
-            android:text="Search"/>
-    </LinearLayout>
-
+        />
 </LinearLayout>
