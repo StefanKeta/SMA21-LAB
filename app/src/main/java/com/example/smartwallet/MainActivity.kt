@@ -75,6 +75,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v!!.id){
             R.id.bSearch -> searchLogic()
+            R.id.bUpdate -> updateLogic()
         }
     }
 
@@ -85,6 +86,26 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             currentMonth = eSearch.text.toString().lowercase()
             tStatus.text = "Searching..."
             createNewDBListener()
+        }
+    }
+
+    private fun updateLogic(){
+        if(eSearch.text.isEmpty() || eIncome.text.isEmpty() || eExpenses.text.isEmpty())
+            Toast.makeText(this,"The fields must be filled",Toast.LENGTH_SHORT)
+                .show()
+        else{
+            val monthlyExpenses = MonthlyExpenses(eSearch.text.toString(),eExpenses.text.toString().toInt(),eIncome.text.toString().toInt())
+            databaseReference
+                .child("calendar")
+                .child(monthlyExpenses.month)
+                .child("Expenses")
+                .setValue(monthlyExpenses.expenses)
+
+            databaseReference
+                .child("calendar")
+                .child(monthlyExpenses.month)
+                .child("Income")
+                .setValue(monthlyExpenses.income)
         }
     }
 }
