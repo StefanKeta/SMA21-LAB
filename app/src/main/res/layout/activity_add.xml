@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="48dp">
+
+    <EditText
+        android:id="@+id/nameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:layout_marginBottom="16dp"
+        android:autofillHints="Name"
+        />
+
+    <EditText
+        android:id="@+id/costsET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="Cost"
+        android:hint="Cost"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="16dp"
+        />
+
+    <Spinner
+        android:id="@+id/typeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        />
+
+    <TextView
+        android:id="@+id/timestampET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="20/12/2021"
+        android:layout_marginBottom="16dp"
+        />
+
+    <Button
+        android:id="@+id/savePaymentBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginBottom="16dp"
+        />
+
+</LinearLayout>

@@ -8,7 +8,7 @@
     tools:context=".ListActivity">
 
     <TextView
-        android:id="@+id/foundTV"
+        android:id="@+id/tStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="Found x payments for this month"
@@ -18,9 +18,8 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="400dp"
         android:layout_above="@+id/lBottom"
-        android:layout_below="@+id/tStatus"
         android:divider="@android:color/transparent"
         android:dividerHeight="4dp"/>
 

@@ -39,7 +39,7 @@ class PaymentAdapter(context: Context,private val layoutResourceID: Int, private
         val (timestamp, cost, name, type) = payments[position]
         itemHolder.tIndex!!.text = (position + 1).toString()
         itemHolder.tName!!.text = name
-        itemHolder.lHeader!!.setBackgroundColor(getColorFromPaymentType(type!!))
+        itemHolder.lHeader!!.setBackgroundColor(getColorFromPaymentType(type!!.lowercase()))
         itemHolder.tCost!!.text = "$cost LEI"
         itemHolder.tType!!.text = type
         itemHolder.tDate!!.text = "Date: " + timestamp!!.substring(0, 10)
