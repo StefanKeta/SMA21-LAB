@@ -8,6 +8,21 @@
     tools:context=".ListActivity">
 
     <TextView
+        android:id="@+id/tLoginDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        />
+
+    <TextView
         android:id="@+id/tStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -6,6 +6,7 @@ import android.net.NetworkInfo
 import android.net.ConnectivityManager
 import android.widget.Toast
 import com.example.smartwallet.model.Payment
+import com.google.firebase.database.DatabaseReference
 import java.io.IOException
 import java.io.ObjectInputStream
 import java.util.*
